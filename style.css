@@ -1,0 +1,88 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #e7e7e7;
+}
+
+.wrapper {
+  /* Using vmin units in CSS is particularly useful for creating responsive designs that can adapt to different screen sizes.
+   By using vmin, the size of the element will adjust proportionally to the size of the viewport, 
+   ensuring that the design remains consistent and visually pleasing across different devices. */
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #282828;
+}
+
+.game-details {
+  color: #e7e7e7;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.play-board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr); /* Creating grid with 30 columns and 30 rows */
+  background: #8db90b83;
+}
+
+.play-board .food {
+  background: #7b0101;
+}
+
+.play-board .head {
+  background: #282828;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+
+.controls i {
+  padding: 25px 0;
+  color: #e7e7e7;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  width: calc(100% / 4);
+  border-right: 1px solid #414142;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
