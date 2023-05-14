@@ -84,11 +84,11 @@ body {
 }
 
 .controls .left {
-  left: 30%;
+  left: 25%;
 }
 
 .controls .right {
-  left: 70%;
+  left: 75%;
 }
 
 @media screen and (max-width: 800px) {
